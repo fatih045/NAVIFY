@@ -8,13 +8,21 @@ import { RegisterPageComponent } from './register-page/register-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import { MainPageComponent } from './main-page/main-page.component';
+import { AccountComponent } from './account/account.component';
+import { ExploreComponent } from './explore/explore.component';
+import { SchedulerComponent } from './scheduler/scheduler.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     RegisterPageComponent,
-    MainPageComponent
+    MainPageComponent,
+    AccountComponent,
+    ExploreComponent,
+    SchedulerComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
