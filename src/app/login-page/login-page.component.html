@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Form Design</title>
-  <link rel="stylesheet" href="/login-page.component.css">
+<!--  //<link rel="stylesheet" href="/login-page.component.css">-->
 </head>
 <body>
 
 <div class="container">
 
   <div class="image_box">
-    <img src="./Green_Tree_png_Image.png">
+<!--    <img src="./Green_Tree_png_Image.png">-->
   </div>
 
   <div class="box">
@@ -42,7 +42,7 @@
       <button class="login_button" type="submit">Login</button>
 
       <div class="link_box">
-        <div class="signup_link">Don't have an account? <a href="#">Sign Up</a></div>
+        <div class="signup_link">Don't have an account? <a routerLink="/register">Sign Up</a></div>
         <div class="contact_link">Need Help? <a href="#">Contact Us</a></div>
       </div>
 
@@ -53,3 +53,4 @@
 
 </body>
 </html>
+<router-outlet></router-outlet>

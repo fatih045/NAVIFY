@@ -1,4 +1,3 @@
-
 *{
   padding: 0;
   margin: 0;
@@ -36,7 +35,7 @@ body{
   transform: translate(-50% , -50%);
 }
 .box{
-  width: 400px;
+  width: 800px;
   margin: 10px;
   padding: 15px;
 }
@@ -49,7 +48,7 @@ h2{
 h2::before{
   position: absolute;
   content: "";
-  width: 55px;
+  width: 210px;
   height: 6px;
   border-radius: 100px;
   background-color: #ffb74d;
@@ -148,4 +147,17 @@ h2::before{
 .box form .link_box .contact_link a:hover,
 .box form .forgot_password_box .forgot_password a:hover{
   text-decoration: underline;
+}
+.input_column {
+  width: 45%; /* Sutunların genişliğini ayarlayın */
+  float: left; /* Sutunları yan yana yerleştirin */
+  margin-right: 5%; /* Sutunlar arasına boşluk bırakın */
+}
+
+.left_column {
+  margin-right: 0; /* Sol sütunun sağ kenarına boşluk bırakmayın */
+}
+
+.right_column {
+  margin-left: 5%; /* Sağ sütunun sol kenarına boşluk bırakın */
 }
