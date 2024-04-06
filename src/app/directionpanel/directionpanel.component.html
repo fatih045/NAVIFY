@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Yol tarifi paneli için stiller */
+    .floating-panel {
+      width: 300px; /* Panelin genişliğini ayarlayın */
+      height: 600px; /* Panelin yüksekliğini ayarlayın */
+      overflow-y: auto; /* Eğer içerik belirlenen yükseklikten daha büyükse dikey kaydırma çubuğunu gösterin */
+      border: 1px solid #ccc; /* Panelin kenarlık rengi ve kalınlığını belirleyin */
+      padding: 10px; /* Panel içeriğine boşluk ekleyin */
+    }
+
+    /* Harita containerı ve diğer stiller */
+    .container {
+      display: flex; /* Container içindeki elemanların yatay olarak sıralanmasını sağlayın */
+
+    }
+
+    #map {
+      flex: 1; /* Harita containerının genişliğini geri kalan tüm alanı kaplamak için ayarlayın */
+      height: 600px; /* Harita yüksekliğini belirleyin */
+    }
+
+    /* Giriş alanları ve diğer stiller */
+    input {
+
+      margin: 5px; /* Giriş alanları arasında ve giriş alanı ile diğer elementler arasında boşluk ekleyin */
+
+    }
+  </style>
+</head>
+<body>
+<div style="display: flex; justify-content: center;">
+  <div>
+    <input id="origin-input" type="text" placeholder="Enter starting point">
+    <input id="destination-input" type="text" placeholder="Enter destination">
+    <input id="submit" type="button" value="Show Route">
+  </div>
+</div>
+
+<div class="container">
+  <div id="map"></div>
+  <div class="sidebar">
+<!--  <div class="sidebar">-->
+    <div id="directions-panel" class="floating-panel"></div>
+  </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places&v=weekly"></script>
+</body>
+</html>

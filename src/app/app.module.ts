@@ -12,6 +12,8 @@ import { AccountComponent } from './account/account.component';
 import { ExploreComponent } from './explore/explore.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { EmailcheckComponent } from './emailcheck/emailcheck.component';
+import { DirectionpanelComponent } from './directionpanel/directionpanel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FavoritesComponent } from './favorites/favorites.component';
     AccountComponent,
     ExploreComponent,
     SchedulerComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    EmailcheckComponent,
+    DirectionpanelComponent
   ],
   imports: [
     BrowserModule,

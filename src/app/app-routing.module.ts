@@ -7,6 +7,8 @@ import {FavoritesComponent} from "./favorites/favorites.component";
 import {ExploreComponent} from "./explore/explore.component";
 import {AccountComponent} from "./account/account.component";
 import {SchedulerComponent} from "./scheduler/scheduler.component";
+import {EmailcheckComponent} from "./emailcheck/emailcheck.component";
+import {DirectionpanelComponent} from "./directionpanel/directionpanel.component";
 
 
 
@@ -17,6 +19,8 @@ const routes:Routes = [
   {path:'explore',component:ExploreComponent},
   {path:'account',component:AccountComponent},
   {path:'scheduler',component:SchedulerComponent},
+  {path:'checkEmail',component:EmailcheckComponent},
+  {path:'directions',component:DirectionpanelComponent},
 
 
 
