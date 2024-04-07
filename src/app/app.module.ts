@@ -10,10 +10,12 @@ import {RouterLink, RouterOutlet} from "@angular/router";
 import { MainPageComponent } from './main-page/main-page.component';
 import { AccountComponent } from './account/account.component';
 import { ExploreComponent } from './explore/explore.component';
-import { SchedulerComponent } from './scheduler/scheduler.component';
+import { SchedulerComponent } from './Schedulers/scheduler/scheduler.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { EmailcheckComponent } from './emailcheck/emailcheck.component';
 import { DirectionpanelComponent } from './directionpanel/directionpanel.component';
+import { TripListPageComponent } from './Schedulers/trip-list-page/trip-list-page.component';
+import { ConfigureTripComponent } from './Schedulers/configure-trip/configure-trip.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { DirectionpanelComponent } from './directionpanel/directionpanel.compone
     SchedulerComponent,
     FavoritesComponent,
     EmailcheckComponent,
-    DirectionpanelComponent
+    DirectionpanelComponent,
+    TripListPageComponent,
+    ConfigureTripComponent
   ],
   imports: [
     BrowserModule,

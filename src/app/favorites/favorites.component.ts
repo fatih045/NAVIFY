@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Trip} from "../models/trip";
 
 @Component({
   selector: 'app-favorites',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class FavoritesComponent {
 
+    protected readonly Component = Component;
+  tripList : Trip[] =[];
 }

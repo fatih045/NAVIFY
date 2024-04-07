@@ -6,7 +6,7 @@ import {RegisterPageComponent} from "./register-page/register-page.component";
 import {FavoritesComponent} from "./favorites/favorites.component";
 import {ExploreComponent} from "./explore/explore.component";
 import {AccountComponent} from "./account/account.component";
-import {SchedulerComponent} from "./scheduler/scheduler.component";
+import {SchedulerComponent} from "./Schedulers/scheduler/scheduler.component";
 import {EmailcheckComponent} from "./emailcheck/emailcheck.component";
 import {DirectionpanelComponent} from "./directionpanel/directionpanel.component";
 
