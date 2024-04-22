@@ -16,6 +16,7 @@ import { EmailcheckComponent } from './emailcheck/emailcheck.component';
 import { DirectionpanelComponent } from './directionpanel/directionpanel.component';
 import { TripListPageComponent } from './Schedulers/trip-list-page/trip-list-page.component';
 import { ConfigureTripComponent } from './Schedulers/configure-trip/configure-trip.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ConfigureTripComponent } from './Schedulers/configure-trip/configure-tr
     NgbModule,
     AppRoutingModule,
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
