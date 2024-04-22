@@ -20,44 +20,49 @@
     <h2>Registration</h2>
 
 
-    <form action="#">
+    <form action="#"   #saveForm="ngForm" (ngSubmit)="saveUser(saveForm)">
       <div class="input_column left_column">
         <div class="input_box">
-          <input type="text" required>
+          <input type="text" required   [ngModel]="registerModel.name"   name="userName">
           <label>Name</label>
         </div>
         <div class="input_box">
-          <input type="text" required>
+          <input type="text" required     [ngModel]="registerModel.surname"   name="userSurname">
           <label>Surname</label>
         </div>
         <div class="input_box">
-          <input type="text" required>
+          <input type="text" required  [ngModel]="registerModel.TCNo"   name="userTC">
           <label>T.C</label>
         </div>
         <div class="input_box">
-          <input type="date" required>
+          <input type="date" required  [ngModel]="registerModel.year"   name="userBirth">
           <label>Year</label>
         </div>
       </div>
 
       <div class="input_column right_column">
         <div class="input_box">
-          <input type="text" required>
+          <input type="text" required  [ngModel]="registerModel.userName"   name="userUserName">
           <label>Username</label>
         </div>
 
         <div class="input_box">
-          <input type="text" required>
+          <input type="text" required  [ngModel]="registerModel.phoneNo"   name="userPhoneNumber">
           <label>Phone Number</label>
         </div>
         <div class="input_box">
-          <input type="password" required>
+          <input type="email" required  [ngModel]="registerModel.email"   name="userEmail">
+          <label>Email</label>
+        </div>
+
+        <div class="input_box">
+          <input type="password" required [ngModel]="registerModel.password"   name="userPassword">
           <label>Password</label>
         </div>
-        <div class="input_box">
-          <input type="password" required>
-          <label>Confirm Password</label>
-        </div>
+<!--        <div class="input_box">-->
+<!--          <input type="password" required>-->
+<!--          <label>Confirm Password</label>-->
+<!--        </div>-->
       </div>
 
       <label class="checkbox">

@@ -4,7 +4,7 @@ export interface User {
   surname: string
   email: string
   password: string
-  year :undefined
+  year :string
   TCNo: string
   userName: string
   phoneNo: string
