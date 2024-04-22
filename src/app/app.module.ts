@@ -17,6 +17,7 @@ import { DirectionpanelComponent } from './directionpanel/directionpanel.compone
 import { TripListPageComponent } from './Schedulers/trip-list-page/trip-list-page.component';
 import { ConfigureTripComponent } from './Schedulers/configure-trip/configure-trip.component';
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     RouterOutlet,
     RouterLink,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
