@@ -23,46 +23,46 @@
     <form action="#"   #saveForm="ngForm" (ngSubmit)="saveUser(saveForm)">
       <div class="input_column left_column">
         <div class="input_box">
-          <input type="text" required   [ngModel]="registerModel.name"   name="userName">
+          <input type="text" required   [ngModel]="registerModel.firstName"   name="firstName">
           <label>Name</label>
         </div>
         <div class="input_box">
-          <input type="text" required     [ngModel]="registerModel.surname"   name="userSurname">
+          <input type="text" required     [ngModel]="registerModel.lastName"   name="lastName">
           <label>Surname</label>
         </div>
         <div class="input_box">
-          <input type="text" required  [ngModel]="registerModel.TCNo"   name="userTC">
+          <input type="text" required  [ngModel]="registerModel.tcNo"   name="tcNo">
           <label>T.C</label>
         </div>
         <div class="input_box">
-          <input type="date" required  [ngModel]="registerModel.year"   name="userBirth">
+          <input type="text" required  [ngModel]="registerModel.birthofYear"   name="birthofYear">
           <label>Year</label>
         </div>
       </div>
 
       <div class="input_column right_column">
         <div class="input_box">
-          <input type="text" required  [ngModel]="registerModel.userName"   name="userUserName">
+          <input type="text" required  [ngModel]="registerModel.userName"   name="userName">
           <label>Username</label>
         </div>
 
         <div class="input_box">
-          <input type="text" required  [ngModel]="registerModel.phoneNo"   name="userPhoneNumber">
+          <input type="text" required  [ngModel]="registerModel.phoneNumber"   name="phoneNumber">
           <label>Phone Number</label>
         </div>
         <div class="input_box">
-          <input type="email" required  [ngModel]="registerModel.email"   name="userEmail">
+          <input type="email" required  [ngModel]="registerModel.email"   name="email">
           <label>Email</label>
         </div>
 
         <div class="input_box">
-          <input type="password" required [ngModel]="registerModel.password"   name="userPassword">
+          <input type="password" required [ngModel]="registerModel.password"   name="password">
           <label>Password</label>
         </div>
-<!--        <div class="input_box">-->
-<!--          <input type="password" required>-->
-<!--          <label>Confirm Password</label>-->
-<!--        </div>-->
+        <div class="input_box">
+          <input type="password" required    [ngModel]="registerModel.confirmPassword"   name="confirmPassword">
+          <label>Confirm Password</label>
+        </div>
       </div>
 
       <label class="checkbox">

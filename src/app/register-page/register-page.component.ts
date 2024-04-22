@@ -13,7 +13,7 @@ export class RegisterPageComponent {
   registerModel:User
 
   constructor(private httpPost:UserAuthService) {
-   this.registerModel = {userName:"", password:"",email:"",phoneNo:"",TCNo:"",year:"",name:"",surname:""}
+   this.registerModel = {userName:"", password:"",email:"",phoneNumber:"",tcNo:0,birthofYear:0,firstName:"",lastName:"",confirmPassword:""}
 
   };
 

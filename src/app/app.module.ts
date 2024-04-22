@@ -19,6 +19,7 @@ import { ConfigureTripComponent } from './Schedulers/configure-trip/configure-tr
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import {HttpClientModule} from "@angular/common/http";
     EmailcheckComponent,
     DirectionpanelComponent,
     TripListPageComponent,
-    ConfigureTripComponent
+    ConfigureTripComponent,
+
   ],
   imports: [
     BrowserModule,

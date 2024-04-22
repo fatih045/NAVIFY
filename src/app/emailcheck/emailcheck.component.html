@@ -1,13 +1,13 @@
 
-<form>
+<form   #saveForm="ngForm" (ngSubmit)="confirmEmail(saveForm)" >
   <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+    <label for="userId" class="form-label">UserID</label>
+    <input type="text" class="form-control" id="userId" aria-describedby="emailHelp"    [ngModel]="emailcheck.userId"   name="userId">
 
   </div>
   <div class="mb-3">
     <label for="enterCode" class="form-label">ENTER CODE</label>
-    <input type="text" class="form-control" id="enterCode">
+    <input type="text" class="form-control" id="enterCode"   [ngModel]="emailcheck.code"   name="code" >
   </div>
 
 

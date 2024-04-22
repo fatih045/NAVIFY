@@ -2,6 +2,7 @@ import {Injectable, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {User} from "../models/user";
 import {map} from "rxjs";
+import {Email} from "../models/email";
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,12 @@ export class UserAuthService {
     //
     // ))
 
+ }
+
+
+ confirmEmail(email:Email){
+
+  return this.HttpClient.post<Email>("https://softwareproject.azurewebsites.net/api/Account/confirm-email",email)
  }
 
  //

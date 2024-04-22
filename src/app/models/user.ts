@@ -1,13 +1,14 @@
 export interface User {
 
-  name: string
-  surname: string
+  firstName: string
+  lastName: string
   email: string
   password: string
-  year :string
-  TCNo: string
+  birthofYear : number
+  tcNo: number
   userName: string
-  phoneNo: string
+  phoneNumber: string
+  confirmPassword: string
 
 
 
