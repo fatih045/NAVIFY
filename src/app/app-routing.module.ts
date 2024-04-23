@@ -19,7 +19,7 @@ const routes:Routes = [
   {path:'explore',component:ExploreComponent},
   {path:'account',component:AccountComponent},
   {path:'scheduler',component:SchedulerComponent},
-  {path:'checkEmail',component:EmailcheckComponent},
+  {path:'checkEmail/:userData',component:EmailcheckComponent},
   {path:'directions',component:DirectionpanelComponent},
 
 

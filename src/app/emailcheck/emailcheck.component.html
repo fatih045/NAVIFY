@@ -2,7 +2,7 @@
 <form   #saveForm="ngForm" (ngSubmit)="confirmEmail(saveForm)" >
   <div class="mb-3">
     <label for="userId" class="form-label">UserID</label>
-    <input type="text" class="form-control" id="userId" aria-describedby="emailHelp"    [ngModel]="emailcheck.userId"   name="userId">
+    <input type="text" class="form-control" id="userId" aria-describedby="emailHelp"    [ngModel]="emailcheck.userId"   name="userId"  readonly>
 
   </div>
   <div class="mb-3">

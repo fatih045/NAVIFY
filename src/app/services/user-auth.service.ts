@@ -13,7 +13,9 @@ export class UserAuthService {
 
 
  createUser(user:User){
-    return this.HttpClient.post<User>("https://softwareproject.azurewebsites.net/api/Account/register",user)
+
+    // user to any
+    return this.HttpClient.post<any>("https://softwareproject.azurewebsites.net/api/Account/register",user)
 
 
     // return this.HttpClient.post<Response>("https://softwareproject.azurewebsites.net/api/Account/register",user ,{observe:'response'}).pipe(map(
@@ -25,8 +27,11 @@ export class UserAuthService {
 
 
  confirmEmail(email:Email){
+    const userId = email.userId
+    const code = email.code
+   return this.HttpClient.post<Email>(`https://softwareproject.azurewebsites.net/api/Account/confirm-email?userID=${email.userId}&code=${email.code}`, email);
 
-  return this.HttpClient.post<Email>("https://softwareproject.azurewebsites.net/api/Account/confirm-email",email)
+
  }
 
  //
