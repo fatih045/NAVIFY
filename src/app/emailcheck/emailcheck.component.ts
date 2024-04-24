@@ -28,6 +28,7 @@ export class EmailcheckComponent implements OnInit {
 
 
 
+
   }
 
   confirmEmail(saveForm: NgForm) {
