@@ -21,7 +21,7 @@ export class EmailcheckComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const userData=this.route.snapshot.paramMap.get('userData');  //userID
+    const userData=this.route.snapshot.paramMap.get('userData');  //userID  bind
     if (userData){
       this.emailcheck.userId=userData
     }
