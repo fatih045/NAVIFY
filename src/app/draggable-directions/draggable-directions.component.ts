@@ -37,7 +37,7 @@ function initMapDraggable(): void {
   // Google Haritası oluşturun
   const map = new google.maps.Map(mapElement as HTMLElement, {
     zoom: 4,
-    center: { lat: -24.345, lng: 134.46 }, // Australia.
+    center: { lat: 36.89, lng: 30.64 }, // Australia.
   });
 
   const directionsService = new google.maps.DirectionsService();
@@ -58,8 +58,8 @@ function initMapDraggable(): void {
 
   // Rotaları gösterin
   displayRouteDraggable(
-    "Perth, WA",
-    "Sydney, NSW",
+    "Antalya",
+    "İstanbul",
     directionsService,
     directionsRenderer
   );
@@ -75,8 +75,8 @@ function displayRouteDraggable(
     origin,
     destination,
     waypoints: [
-      { location: "Adelaide, SA" },
-      { location: "Broken Hill, NSW" },
+      { location: "Mersin" },
+      { location: "Ankara" },
     ],
     travelMode: google.maps.TravelMode.DRIVING,
     avoidTolls: true,
