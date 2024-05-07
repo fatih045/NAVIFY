@@ -1,22 +1,70 @@
+<!--<html>-->
+<!--<head>-->
+<!--  <title>Draggable Directions</title>-->
+<!--  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="container">-->
+<!--  <div id="draggable-map" style="height: 800px; width: 70%;"></div> &lt;!&ndash; Map'in yer aldığı element &ndash;&gt;-->
+<!--  <div id="sidebar">-->
+<!--    <p>Total Distance: <span id="total-distance"></span></p> &lt;!&ndash; Toplam mesafeyi göstermek için `id="total-distance"` &ndash;&gt;-->
+<!--    <div id="draggable-panel"></div> &lt;!&ndash; Yönlendirme paneli için `id="draggable-panel"` &ndash;&gt;-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Google Maps API'yi yükleyen `script` etiketi &ndash;&gt;-->
+<!--<script-->
+<!--  src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMapDraggable&libraries=places"-->
+<!--  defer-->
+<!--&gt;</script>-->
+<!--</body>-->
+<!--</html>-->
+
 <html>
+
 <head>
   <title>Draggable Directions</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <style>
+    /* Sidebar ve panel elementlerine kaydırma özelliği eklemek için CSS kuralları */
+    #sidebar {
+      width: 30%; /* Yan panelin genişliği */
+      overflow-y: auto; /* Dikey kaydırma (scroll) ekleyin */
+      max-height: 800px; /* Maksimum yükseklik ayarı (isteğe bağlı) */
+    }
+
+    #draggable-panel {
+      overflow-y: auto; /* Dikey kaydırma (scroll) ekleyin */
+      max-height: 600px; /* Maksimum yükseklik ayarı (isteğe bağlı) */
+    }
+  </style>
 </head>
+
 <body>
 <div id="container">
-  <div id="draggable-map" style="height: 800px; width: 70%;"></div> <!-- Map'in yer aldığı element -->
+  <div id="draggable-map" style="height: 800px; width: 70%;"></div>
   <div id="sidebar">
-    <p>Total Distance: <span id="total-distance"></span></p> <!-- Toplam mesafeyi göstermek için `id="total-distance"` -->
-    <div id="draggable-panel"></div> <!-- Yönlendirme paneli için `id="draggable-panel"` -->
+    <form (ngSubmit)="calculateRoute()">
+      <div>
+        <label for="origin">Başlangıç Noktası:</label>
+        <input type="text" id="origin" [(ngModel)]="origin" name="origin" required />
+      </div>
+      <div>
+        <label for="destination">Bitiş Noktası:</label>
+        <input type="text" id="destination" [(ngModel)]="destination" name="destination" required />
+      </div>
+      <div>
+        <label for="waypoints">Ara Noktalar:</label>
+        <input type="text" id="waypoints" [(ngModel)]="waypoints" name="waypoints" placeholder="Her ara nokta için virgülle ayırın" />
+      </div>
+      <button type="submit">Rotayı Hesapla</button>
+    </form>
+    <p>Total Distance: <span id="total-distance"></span></p>
+    <div id="draggable-panel"></div>
   </div>
 </div>
 
-<!-- Google Maps API'yi yükleyen `script` etiketi -->
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMapDraggable&libraries=places"
-  defer
-></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMapDraggable&libraries=places" defer></script>
 </body>
-</html>
 
+</html>
