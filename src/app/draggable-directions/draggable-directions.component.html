@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>Draggable Directions</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+<body>
+<div id="container">
+  <div id="draggable-map" style="height: 800px; width: 70%;"></div> <!-- Map'in yer aldığı element -->
+  <div id="sidebar">
+    <p>Total Distance: <span id="total-distance"></span></p> <!-- Toplam mesafeyi göstermek için `id="total-distance"` -->
+    <div id="draggable-panel"></div> <!-- Yönlendirme paneli için `id="draggable-panel"` -->
+  </div>
+</div>
+
+<!-- Google Maps API'yi yükleyen `script` etiketi -->
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMapDraggable&libraries=places"
+  defer
+></script>
+</body>
+</html>
+

@@ -9,6 +9,7 @@ import {AccountComponent} from "./account/account.component";
 import {SchedulerComponent} from "./Schedulers/scheduler/scheduler.component";
 import {EmailcheckComponent} from "./emailcheck/emailcheck.component";
 import {DirectionpanelComponent} from "./directionpanel/directionpanel.component";
+import {DraggableDirectionsComponent} from "./draggable-directions/draggable-directions.component";
 
 
 
@@ -21,6 +22,7 @@ const routes:Routes = [
   {path:'scheduler',component:SchedulerComponent},
   {path:'checkEmail/:userData',component:EmailcheckComponent},
   {path:'directions',component:DirectionpanelComponent},
+  {path:'draggable',component:DraggableDirectionsComponent},
 
 
 

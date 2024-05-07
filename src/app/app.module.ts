@@ -18,6 +18,7 @@ import { TripListPageComponent } from './Schedulers/trip-list-page/trip-list-pag
 import { ConfigureTripComponent } from './Schedulers/configure-trip/configure-trip.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { DraggableDirectionsComponent } from './draggable-directions/draggable-directions.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import {HttpClientModule} from "@angular/common/http";
     DirectionpanelComponent,
     TripListPageComponent,
     ConfigureTripComponent,
+    DraggableDirectionsComponent,
 
   ],
   imports: [
