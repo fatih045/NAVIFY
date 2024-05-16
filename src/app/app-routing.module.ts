@@ -10,7 +10,7 @@ import {SchedulerComponent} from "./Schedulers/scheduler/scheduler.component";
 import {EmailcheckComponent} from "./emailcheck/emailcheck.component";
 import {DirectionpanelComponent} from "./directionpanel/directionpanel.component";
 import {DraggableDirectionsComponent} from "./draggable-directions/draggable-directions.component";
-
+import {TripStopComponent} from "./Schedulers/trip-stop/trip-stop.component";
 
 
 const routes:Routes = [
@@ -23,6 +23,7 @@ const routes:Routes = [
   {path:'checkEmail/:userData',component:EmailcheckComponent},
   {path:'directions',component:DirectionpanelComponent},
   {path:'draggable',component:DraggableDirectionsComponent},
+  {path:'tripStop',component:TripStopComponent},
 
 
 

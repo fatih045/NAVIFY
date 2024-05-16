@@ -1,0 +1,39 @@
+<p>trip-stop works!</p>
+
+
+<form action="#"   #saveStopForm="ngForm" (ngSubmit)="saveTripStop(saveStopForm)">
+
+  <div class="mb-3">
+    <label for="stopName" class="form-label">Stop Name</label>
+    <input type="text" class="form-control" id="stopName"  [(ngModel)]="tripStop.stopName" name="stopName">
+  </div>
+
+  <div class="mb-3">
+    <label for="stopDescription" class="form-label">Stop Description</label>
+    <textarea class="form-control" id="stopDescription" [(ngModel)]="tripStop.stopDescription" name="stopDescription"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="locationId" class="form-label">Location ID</label>
+    <input type="number" class="form-control" id="locationId" [(ngModel)]="tripStop.locationId" name="locationId">
+  </div>
+
+  <div class="mb-3">
+    <label for="priority" class="form-label">Priority</label>
+    <input type="number" class="form-control" id="priority" [(ngModel)]="tripStop.priority" name="priority">
+  </div>
+
+  <div class="mb-3">
+    <label for="tripId" class="form-label">Trip ID</label>
+    <input type="number" class="form-control" id="tripId" [(ngModel)]="tripStop.tripId" name="tripId">
+  </div>
+
+  <div class="mb-3">
+    <label for="arriveTime" class="form-label">Arrive Time</label>
+    <input type="datetime-local" class="form-control" id="arriveTime" [(ngModel)]="tripStop.arriveTime" name="arriveTime">
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Kayıt</button>
+
+</form>

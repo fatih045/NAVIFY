@@ -19,7 +19,7 @@ import { ConfigureTripComponent } from './Schedulers/configure-trip/configure-tr
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { DraggableDirectionsComponent } from './draggable-directions/draggable-directions.component';
-
+import {TripStopComponent} from "./Schedulers/trip-stop/trip-stop.component";
 
 @NgModule({
   declarations: [
@@ -36,6 +36,7 @@ import { DraggableDirectionsComponent } from './draggable-directions/draggable-d
     TripListPageComponent,
     ConfigureTripComponent,
     DraggableDirectionsComponent,
+   TripStopComponent
 
   ],
   imports: [

@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {User} from "../models/user";
 import {map} from "rxjs";
 import {Email} from "../models/email";
+import {TripStop} from "../models/TripStop";
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +15,11 @@ export class UserAuthService {
 
  createUser(user:User){
 
-    // user to any
+
     return this.HttpClient.post<any>("https://softwareproject.azurewebsites.net/api/Account/register",user)
 
 
-    // return this.HttpClient.post<Response>("https://softwareproject.azurewebsites.net/api/Account/register",user ,{observe:'response'}).pipe(map(
-    //   (response)=> response.status==201
-    //
-    // ))
+
 
  }
 
@@ -34,16 +32,19 @@ export class UserAuthService {
 
  }
 
- //
- // updateUser(updateUser:User){
- //
- //   return this.HttpClient.put<User>('http://localhost:8080/user/${updateUser.id}',updateUser)
- // }
- //
- //
- // deleteUser(id:number){
- //
- //   return this.HttpClient.delete<User>('http://localhost:8080/user/${id}')
- // }
+
+
+// Sınıfınızın içindeki metot
+  createTripStop(tripStop: TripStop) {
+    // API sürümü, örneğin 1.0, 1.1, gibi bir sürüm belirtmeniz gerekiyor
+    const version = '1.0'; // Örneğin
+
+    // URL'nin doğru bir şekilde oluşturulması
+    const url = `https://softwareproject.azurewebsites.net/api/v${version}/Stop`;
+
+    // HttpClient.post metodu kullanarak HTTP POST isteğinin gönderilmesi
+    return this.HttpClient.post<TripStop>(url, tripStop);
+  }
+
 
 }
