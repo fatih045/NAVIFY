@@ -4,6 +4,7 @@ import {User} from "../models/user";
 import {map} from "rxjs";
 import {Email} from "../models/email";
 import {TripStop} from "../models/TripStop";
+import {Trip} from "../models/trip";
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +45,12 @@ export class UserAuthService {
 
     // HttpClient.post metodu kullanarak HTTP POST isteğinin gönderilmesi
     return this.HttpClient.post<TripStop>(url, tripStop);
+  }
+
+  createTrip(trip: Trip) {
+    const version = '1.0';
+    const url = `https://softwareproject.azurewebsites.net/api/v${version}/Trip`;
+    return this.HttpClient.post<Trip>(url, trip);
   }
 
 

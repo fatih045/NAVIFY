@@ -1,1 +1,29 @@
 <p>configure-trip works!</p>
+<form action="#"   #saveTripForm="ngForm" (ngSubmit)="saveTrip(saveTripForm)">
+
+  <div class="mb-3">
+    <label for="tripName" class="form-label">Trip Name</label>
+    <input type="text" class="form-control" id="tripName"  [(ngModel)]="trip.tripName" name="tripName">
+  </div>
+
+  <div class="mb-3">
+    <label for="tripDescription" class="form-label">Trip Description</label>
+    <textarea class="form-control" id="tripDescription" [(ngModel)]="trip.tripDescription" name="tripDescription"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="tripStartTime" class="form-label">Trip Start Time </label>
+    <input type="datetime-local" class="form-control" id="tripStartTime" [(ngModel)]="trip.tripStartTime" name="tripStartTime">
+  </div>
+
+  <div class="mb-3">
+    <label for="isFavourite" class="form-label">Is Favourite</label>
+    <input type="checkbox" class="form-check-input" id="isFavourite" [(ngModel)]="trip.isFavourite" name="isFavourite">
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary">Kayıt</button>
+
+</form>
+
