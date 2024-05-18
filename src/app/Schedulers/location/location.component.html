@@ -1,0 +1,28 @@
+<p>location works!</p>
+<form action="#"   #saveLocationForm="ngForm" (ngSubmit)="saveLocation(saveLocationForm)">
+
+  <div class="mb-3">
+    <label for="locationName" class="form-label">Location Name</label>
+    <input type="text" class="form-control" id="locationName"  [(ngModel)]="location.locationName" name="locationName">
+  </div>
+
+  <div class="mb-3">
+    <label for="locationAddress" class="form-label">Location Address</label>
+    <textarea class="form-control" id="locationAddress" [(ngModel)]="location.locationAdress" name="locationAddress"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="latitude" class="form-label">Location Latitude </label>
+    <input type="number" class="form-control" id="latitude" [(ngModel)]="location.latitude" name="latitude">
+  </div>
+
+  <div class="mb-3">
+    <label for="longitude" class="form-label">Location Longitude</label>
+    <input type="number" class="form-control" id="longitude" [(ngModel)]="location.longitude" name="longitude">
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary">Kayıt</button>
+
+</form>

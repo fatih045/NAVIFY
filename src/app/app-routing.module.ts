@@ -12,6 +12,7 @@ import {DirectionpanelComponent} from "./directionpanel/directionpanel.component
 import {DraggableDirectionsComponent} from "./draggable-directions/draggable-directions.component";
 import {TripStopComponent} from "./Schedulers/trip-stop/trip-stop.component";
 import {ConfigureTripComponent} from "./Schedulers/configure-trip/configure-trip.component";
+import {LocationComponent} from "./Schedulers/location/location.component";
 
 
 const routes:Routes = [
@@ -25,7 +26,8 @@ const routes:Routes = [
   {path:'directions',component:DirectionpanelComponent},
   {path:'draggable',component:DraggableDirectionsComponent},
   {path:'tripStop',component:TripStopComponent},
-  {path:'trip',component:ConfigureTripComponent}
+  {path:'trip',component:ConfigureTripComponent},
+  {path:'location',component:LocationComponent},
 
 
 

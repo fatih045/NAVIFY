@@ -1,10 +1,11 @@
 import {Injectable, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {User} from "../models/user";
 import {map} from "rxjs";
 import {Email} from "../models/email";
 import {TripStop} from "../models/TripStop";
 import {Trip} from "../models/trip";
+import {Locations} from "../models/Locations";
 
 @Injectable({
   providedIn: 'root'
@@ -50,7 +51,17 @@ export class UserAuthService {
   createTrip(trip: Trip) {
     const version = '1.0';
     const url = `https://softwareproject.azurewebsites.net/api/v${version}/Trip`;
-    return this.HttpClient.post<Trip>(url, trip);
+    const token = 'your_api_token'; // Bu kısmı doğru token ile güncelleyin
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+
+    return this.HttpClient.post<Trip>(url, trip,{headers});
+  }
+
+  createLocation(location: Locations) {
+    const version = '1.0';
+    const url = `https://softwareproject.azurewebsites.net/api/v${version}/Location`;
+    return this.HttpClient.post<Locations>(url, location);
+
   }
 
 
